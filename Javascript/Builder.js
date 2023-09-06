@@ -20,7 +20,7 @@ class CarBuilder {
 
   addEngine(engine) {
     this.car.engine = engine;
-    return this;
+    return this; // necessário para encadear as chamadas. ex: new CarBuilder().addEngine("V8").addWheels("Michelin").build();
   }
 
   addWheels(wheels) {
@@ -34,7 +34,7 @@ class CarBuilder {
   }
 
   build() {
-    return this.car;
+    return this.car; // apenas no final do processo o carro é retornado
   }
 }
 
